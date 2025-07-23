@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/misyoshi-akira-hp/static/css/main.f855e6bc.css",
-    "main.js": "/misyoshi-akira-hp/static/js/main.797d6a96.js",
+    "main.css": "/misyoshi-akira-hp/static/css/main.e6c13ad2.css",
+    "main.js": "/misyoshi-akira-hp/static/js/main.230d26c5.js",
     "static/js/453.fc3a5527.chunk.js": "/misyoshi-akira-hp/static/js/453.fc3a5527.chunk.js",
-    "static/media/logo.svg": "/misyoshi-akira-hp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/MiyoshiAkira.jpg": "/misyoshi-akira-hp/static/media/MiyoshiAkira.8377d137da97ffc01993.jpg",
     "index.html": "/misyoshi-akira-hp/index.html",
-    "main.f855e6bc.css.map": "/misyoshi-akira-hp/static/css/main.f855e6bc.css.map",
-    "main.797d6a96.js.map": "/misyoshi-akira-hp/static/js/main.797d6a96.js.map",
+    "main.e6c13ad2.css.map": "/misyoshi-akira-hp/static/css/main.e6c13ad2.css.map",
+    "main.230d26c5.js.map": "/misyoshi-akira-hp/static/js/main.230d26c5.js.map",
     "453.fc3a5527.chunk.js.map": "/misyoshi-akira-hp/static/js/453.fc3a5527.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.797d6a96.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.230d26c5.js"
   ]
 }
