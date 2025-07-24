@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 // SkillsSectionにPropsがないため、空のインターフェースを定義
-interface SkillsSectionProps {}
+interface SkillsSectionProps {
+  title?:  string;
+  skills?: Array<any>;
+}
 
 const SectionWrapper = styled(motion.section)`
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffffff;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -70,18 +73,6 @@ const SkillName = styled.h3`
 `;
 
 function SkillsSection(props: SkillsSectionProps): ReactElement {
-  const skills = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: 'ʦ' },
-    { name: 'JavaScript', icon: 'JS' },
-    { name: 'Node.js', icon: 'Ⓝ' },
-    { name: 'HTML5', icon: '℻' },
-    { name: 'CSS3', icon: '🎨' },
-    { name: 'Styled Components', icon: '💅' },
-    { name: 'Framer Motion', icon: '✨' },
-    { name: 'Git', icon: '⑂' },
-    { name: 'REST APIs', icon: '📡' },
-  ];
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -108,9 +99,9 @@ function SkillsSection(props: SkillsSectionProps): ReactElement {
       viewport={{ once: true, amount: 0.3 }}
       variants={sectionVariants}
     >
-      <SectionTitle variants={itemVariants}>私のスキル</SectionTitle>
+      <SectionTitle variants={itemVariants}>{props.title}</SectionTitle>
       <SkillsGrid variants={sectionVariants}>
-        {skills.map((skill, index) => (
+        {props.skills?.map((skill, index) => (
           <SkillCard key={index} variants={itemVariants}>
             <SkillIcon>{skill.icon}</SkillIcon>
             <SkillName>{skill.name}</SkillName>

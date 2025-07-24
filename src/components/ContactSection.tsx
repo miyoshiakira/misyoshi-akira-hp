@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { SubmitButton } from './CommonParts';
 
 // ContactSectionにPropsがないため、空のインターフェースを定義
 interface ContactSectionProps {}
 
 const SectionWrapper = styled(motion.section)`
   padding: 80px 20px;
-  background-color: #eef4f7;
+  background-color: #ffffffff;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -85,28 +86,6 @@ const TextArea = styled(motion.textarea)`
   &:focus {
     border-color: #2193b0;
     box-shadow: 0 0 0 3px rgba(33, 147, 176, 0.3);
-  }
-`;
-
-const SubmitButton = styled(motion.button)`
-  padding: 15px 30px;
-  background-color: #2193b0;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    background-color: #1a7c93;
-    transform: translateY(-3px);
-  }
-
-  &:active {
-    transform: translateY(0);
   }
 `;
 

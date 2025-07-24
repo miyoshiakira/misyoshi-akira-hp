@@ -1,7 +1,7 @@
 import React from 'react';
  import styled from 'styled-components';
  import { motion, Variants } from 'framer-motion'; // Variantsをインポート
- 
+ import { Image, YoutubeEmbed } from './CommonParts';
  interface HeroSectionProps {
   imageUrl?: string;
   youtubeVideoId?: string;
@@ -80,20 +80,6 @@ import React from 'react';
   @media (max-width: 768px) {
   width: 250px;
   }
- `;
- 
- const Image = styled.img`
-  display: block;
-  width: 100%;
-  height: auto;
- `;
- 
- const YoutubeEmbed = styled.iframe`
-  display: block;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  border: none;
  `;
  
  // Variants型を明示的に指定
