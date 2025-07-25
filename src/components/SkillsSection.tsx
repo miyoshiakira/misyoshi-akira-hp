@@ -18,7 +18,7 @@ const SectionWrapper = styled(motion.section)`
 `;
 
 const SectionTitle = styled(motion.h2)`
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 40px;
   color: #2c3e50;
   position: relative;

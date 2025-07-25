@@ -6,6 +6,7 @@ import { Image, YoutubeEmbed } from './CommonParts';
 import { SubmitButton } from './CommonParts';
 import Portfolio2 from '../media/Portfolio2.png';
 import Portfolio4 from '../media/Portfolio4.png';
+import { SectionTitle } from './CommonParts';
 // PortfolioSectionにはPropsがないため、空のインターフェースを定義
 interface PortfolioSectionProps {}
 
@@ -16,25 +17,6 @@ const SectionWrapper = styled(motion.section)`
   max-width: 900px;
   margin: 0 auto;
   border-bottom: 1px solid #eee;
-`;
-
-const SectionTitle = styled(motion.h2)`
-  font-size: 3em;
-  margin-bottom: 40px;
-  color: #2c3e50;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: #2193b0;
-    border-radius: 2px;
-  }
 `;
 
 const Paragraph = styled(motion.div)`
@@ -72,7 +54,7 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
     >
       <SectionTitle variants={itemVariants}>ポートフォリオ</SectionTitle>
       <Paragraph variants={itemVariants}>
-          <Paper sx={{padding: 2}} elevation={24}>
+          <Paper sx={{padding: 2}} elevation={3}>
             <div><p style={{textAlign: 'start',fontSize: 20}}><b>GitHub</b></p></div>
             <br/>
             <form onSubmit={(event) =>{ 
@@ -86,7 +68,7 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
             </form>
           </Paper>
           <br/>
-          <Paper sx={{padding: 2}} elevation={24}>
+          <Paper sx={{padding: 2}} elevation={3}>
             <div><p style={{textAlign: 'start',fontSize: 20}}><b>生産管理システム プロトタイプ</b></p></div>
             <br/>
             <form onSubmit={(event) =>{ 
@@ -106,7 +88,7 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
             </form>
           </Paper>
           <br/>
-          <Paper sx={{padding: 2}} elevation={24}>
+          <Paper sx={{padding: 2}} elevation={3}>
             <div><p style={{textAlign: 'start',fontSize: 20}}><b>英単語テスト Webアプリケーション</b></p></div>
             <br/>
             <form onSubmit={(event) =>{ 
@@ -123,10 +105,10 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
             </form>
           </Paper>
           <br/>
-          <Paper sx={{padding: 2}} elevation={24}>
+          <Paper sx={{padding: 2}} elevation={3}>
             <div><p style={{textAlign: 'start',fontSize: 20}}><b>自作ゲーム InfiniteDungeon</b></p></div>
             <br/>
-            <Paper elevation={10}>
+            <Paper elevation={3}>
               <YoutubeEmbed
               src={`https://www.youtube.com/embed/yHEGVRFPii0?si=yxoQTykCEFzLSwUX`} // YouTubeの埋め込みURLを修正
               title="YouTube video player"

@@ -1,7 +1,8 @@
 import React from 'react';
  import styled from 'styled-components';
  import { motion, Variants } from 'framer-motion'; // Variantsをインポート
- import { Image, YoutubeEmbed } from './CommonParts';
+ import { Image, Subtitle, Title, YoutubeEmbed } from './CommonParts';
+import { Paper } from '@mui/material';
  interface HeroSectionProps {
   imageUrl?: string;
   youtubeVideoId?: string;
@@ -38,19 +39,6 @@ import React from 'react';
   padding-right: 0;
   margin-bottom: 30px;
   }
- `;
- 
- const Title = styled(motion.h1)`
-  font-size: 3.5em;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- `;
- 
- const Subtitle = styled(motion.p)`
-  font-size: 1.5em;
-  max-width: 600px;
-  line-height: 1.8;
-  margin-bottom: 30px;
  `;
  
  const InfoSectionWrapper = styled(motion.div)`
@@ -95,50 +83,50 @@ import React from 'react';
  };
  
  function HeroSection({ imageUrl, youtubeVideoId, name, title, age, gender, experience }: HeroSectionProps) {
-  return (
-  <HeroWrapper
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.8 }}
-  >
-  <InfoContainer>
-  <Title variants={textVariants} initial="hidden" animate="visible">
-  {name}
-  </Title>
-  <Subtitle variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.2 }}>
-  {title}
-  </Subtitle>
-  <InfoSectionWrapper>
-  <InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.4 }}>
-  年齢: {age}歳
-  </InfoItem>
-  <InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.5 }}>
-  性別: {gender}
-  </InfoItem>
-  <InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.6 }}>
-  経歴: {experience}
-  </InfoItem>
-  </InfoSectionWrapper>
-  </InfoContainer>
- 
-  <MediaContainer variants={mediaVariants} initial="hidden" animate="visible">
-  {imageUrl ? (
-  <Image src={imageUrl} alt={name} />
-  ) : youtubeVideoId ? (
-  <YoutubeEmbed
-  src={`https://www.youtube.com/embed/${youtubeVideoId}`} // YouTubeの埋め込みURLを修正
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  />
-  ) : (
-  <div style={{ backgroundColor: '#333', color: '#fff', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-  No Media Provided
-  </div>
-  )}
-  </MediaContainer>
-  </HeroWrapper>
+  return (  
+<HeroWrapper
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ duration: 0.8 }}
+>
+<InfoContainer>
+<Title variants={textVariants} initial="hidden" animate="visible">
+{name}
+</Title>
+<Subtitle variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.2 }}>
+{title}
+</Subtitle>
+<InfoSectionWrapper>
+<InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.4 }}>
+年齢: {age}歳
+</InfoItem>
+<InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.5 }}>
+性別: {gender}
+</InfoItem>
+<InfoItem variants={textVariants} initial="hidden" animate="visible" transition={{ delay: 0.6 }}>
+経歴: {experience}
+</InfoItem>
+</InfoSectionWrapper>
+</InfoContainer>
+
+<MediaContainer variants={mediaVariants} initial="hidden" animate="visible">
+{imageUrl ? (
+<Image src={imageUrl} alt={name} />
+) : youtubeVideoId ? (
+<YoutubeEmbed
+src={`https://www.youtube.com/embed/${youtubeVideoId}`} // YouTubeの埋め込みURLを修正
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowFullScreen
+/>
+) : (
+<div style={{ backgroundColor: '#333', color: '#fff', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+No Media Provided
+</div>
+)}
+</MediaContainer>
+</HeroWrapper>
   );
  }
  

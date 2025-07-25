@@ -8,6 +8,7 @@ import ContactSection from './components/ContactSection';
 import PortfolioSection from './components/PortfolioSection';
 import GlobalStyles from './GlobalStyles'; // グローバルスタイル
 import MiyoshiAkira from './media/MiyoshiAkira.jpg';
+import ContactTool from './components/ContactTool';
 const AppContainer = styled(motion.div)`
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -53,7 +54,7 @@ const backSkills = [
     { name: 'Azure', icon: '🌩' },
     { name: 'Cloud Flare', icon: '🌤' },
   ];
-
+  
   const toolSkills = [
     { name: 'Git', icon: '🌳' },
     { name: 'SVN', icon: '🐢' },
@@ -77,6 +78,13 @@ function App(): ReactElement { // 関数の戻り値の型も明示
         youtubeVideoId='yw-HK-8yeoM?si=xd8OvmgTDlosqnxE'
         imageUrl={MiyoshiAkira}
       />
+      <ContactTool 
+        twitterUrl='https://x.com/MiyoshiAkiraIT'
+        faceBookUrl='https://www.facebook.com/profile.php?id=61578676293967'
+        instagramUrl='https://www.instagram.com/miyoshi.akira1997/'
+        youtubeUrl='https://www.youtube.com/@AkiraMiyoshi1997'
+        gitHubUrl='https://github.com/miyoshiakira'
+       />
       <AboutSection />
       <SkillsSection title='工程' skills={experience}/>
       <SkillsSection title='バックエンド' skills={backSkills}/>

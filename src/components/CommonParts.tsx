@@ -33,3 +33,35 @@ export const SubmitButton = styled(motion.button)`
     transform: translateY(0);
   }
 `;
+
+export const SectionTitle = styled(motion.h2)`
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #2193b0;
+    border-radius: 2px;
+  }
+`;
+
+ export const Title = styled(motion.h1)`
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ `;
+ 
+ export const Subtitle = styled(motion.p)`
+  font-size: 1.5em;
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+ `;
