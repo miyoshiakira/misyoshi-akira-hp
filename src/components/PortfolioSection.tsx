@@ -127,8 +127,6 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
                 event.preventDefault();
                 window.open("https://weather-app-eight-cyan-55.vercel.app/", "_blank");
                 }}>
-                    <Paper elevation={3}><Image src={WebOpenWeather} /></Paper>
-                    <br/>
                     <SubmitButton type="submit" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       起動する →
                     </SubmitButton>
