@@ -6,6 +6,7 @@ import { Image, YoutubeEmbed } from './CommonParts';
 import { SubmitButton } from './CommonParts';
 import Portfolio2 from '../media/Portfolio2.png';
 import Portfolio4 from '../media/Portfolio4.png';
+import WebOpenWeather from '../media/WebOpenWeather.png';
 import { SectionTitle } from './CommonParts';
 // PortfolioSectionにはPropsがないため、空のインターフェースを定義
 interface PortfolioSectionProps {}
@@ -117,6 +118,23 @@ function PortfolioSection(props: PortfolioSectionProps): ReactElement {
               />
             </Paper>
           </Paper>
+          <br/>
+            <Paper sx={{padding: 2}} elevation={3}>
+              <div><p style={{textAlign: 'start',fontSize: 20}}><b>お天気情報API連携Webページ</b></p></div>
+              <br/>
+              <form onSubmit={(event) =>{ 
+                // フォームのデフォルト動作（ページ再読み込み）を阻止する
+                event.preventDefault();
+                window.open("https://weather-app-eight-cyan-55.vercel.app/", "_blank");
+                }}>
+                    <Paper elevation={3}><Image src={WebOpenWeather} /></Paper>
+                    <br/>
+                    <SubmitButton type="submit" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      起動する →
+                    </SubmitButton>
+                    <br/>
+              </form>
+            </Paper>
           <br/>
       </Paragraph>
     </SectionWrapper>
