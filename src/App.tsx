@@ -9,6 +9,13 @@ import PortfolioSection from './components/PortfolioSection';
 import GlobalStyles from './GlobalStyles'; // グローバルスタイル
 import MiyoshiAkira from './media/MiyoshiAkira.jpg';
 import ContactTool from './components/ContactTool';
+
+//めもだよーん
+//const test = styled(motion.div)`
+//  test: 'test', test;
+//  test: #test;
+//`;
+
 const AppContainer = styled(motion.div)`
   font-family: 'Arial', sans-serif;
   color: #333;
