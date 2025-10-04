@@ -93,13 +93,13 @@ function App(): ReactElement { // 関数の戻り値の型も明示
         gitHubUrl='https://github.com/miyoshiakira'
        />
       <AboutSection />
+      <PortfolioSection />
       <SkillsSection title='工程' skills={experience}/>
       <SkillsSection title='バックエンド' skills={backSkills}/>
       <SkillsSection title='フロントエンド' skills={frontSkills}/>
       <SkillsSection title='データベース' skills={databaseSkills}/>
       <SkillsSection title='クラウド' skills={cloudSkills}/>
       <SkillsSection title='その他' skills={toolSkills}/>
-      <PortfolioSection />
       <ContactSection />
     </AppContainer>
   );
