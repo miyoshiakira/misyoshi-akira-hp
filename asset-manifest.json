@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/misyoshi-akira-hp/static/css/main.e6c13ad2.css",
-    "main.js": "/misyoshi-akira-hp/static/js/main.7aa95f2b.js",
+    "main.js": "/misyoshi-akira-hp/static/js/main.c64b504d.js",
     "static/js/453.fc3a5527.chunk.js": "/misyoshi-akira-hp/static/js/453.fc3a5527.chunk.js",
     "static/media/X.jpg": "/misyoshi-akira-hp/static/media/X.bdffb764d6054274c535.jpg",
     "static/media/Portfolio2.png": "/misyoshi-akira-hp/static/media/Portfolio2.f2fdc926f870d685fa4d.png",
@@ -9,11 +9,11 @@
     "static/media/Portfolio4.png": "/misyoshi-akira-hp/static/media/Portfolio4.a0e543d4315a1c4dd550.png",
     "index.html": "/misyoshi-akira-hp/index.html",
     "main.e6c13ad2.css.map": "/misyoshi-akira-hp/static/css/main.e6c13ad2.css.map",
-    "main.7aa95f2b.js.map": "/misyoshi-akira-hp/static/js/main.7aa95f2b.js.map",
+    "main.c64b504d.js.map": "/misyoshi-akira-hp/static/js/main.c64b504d.js.map",
     "453.fc3a5527.chunk.js.map": "/misyoshi-akira-hp/static/js/453.fc3a5527.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.7aa95f2b.js"
+    "static/js/main.c64b504d.js"
   ]
 }
